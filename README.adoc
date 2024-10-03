@@ -1,0 +1,25 @@
+= `Spider`
+
+`Spider` is a tool for writing literate programs using https://asciidoc.org/[AsciiDoc] and https://asciidoctor.org/[Asciidoctor].
+
+.`Usage`:
+[source, txt]
+----
+Usage: spider [OPTIONS]... [FILES / FILES:BLOCK]...
+A tool for writing literate programs using AsciiDoc.
+
+OPTIONS:
+    -d, --down                       downtangles a file
+                                     the default operation that will be run if no other command is supplied
+                                     will conflict with -u / --up
+
+    -u, --up                         uptangles a source file
+                                     will conflict with -d / --down
+
+    -h, --help                       prints out this help message
+
+    -y, --no-confirm                 automatically answers the default answer to prompts
+----
+
+.Documentation links:
+* link:doc/project.adoc[Project Setup] (The LICENSE is here)
