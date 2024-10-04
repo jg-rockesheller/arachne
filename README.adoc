@@ -1,8 +1,9 @@
-= `Arachne`
+= `arachne`
 
-`Arachne` is a tool for writing literate programs using https://asciidoc.org/[AsciiDoc] and https://asciidoctor.org/[Asciidoctor].
+`arachne` is a tool for writing literate programs using https://asciidoc.org/[AsciiDoc] and https://asciidoctor.org/[Asciidoctor].
 
-.`Usage`:
+== `Usage`
+
 [source, txt]
 ----
 Usage: arachne [OPTIONS]... [FILES / FILES:BLOCK]...
@@ -21,5 +22,7 @@ OPTIONS:
     -y, --no-confirm                 automatically answers the default answer to prompts
 ----
 
-.Documentation links:
+= Documentation Links
+
+* link:doc/spec/README.adoc[Specification]
 * link:doc/project.adoc[Project Setup] (The LICENSE is here)

@@ -1,0 +1,33 @@
+= Spec Example 1
+
+= `link:example1.txt[]`
+
+[source, txt]
+----
+this is a block that will
+be tangled to example1.txt
+
+<<<Another Name>>>
+----
+
+== `link:example2.txt[Another Name]`
+
+[source, txt]
+----
+this is a block that will
+be tangled to example2.txt
+
+but is named "Another Name"
+
+prefix: <<<Named Block>>> :suffix
+----
+
+== `Named Block`
+
+[source, txt]
+----
+this block is named "Named Block"
+
+and can be referenced using three < and > and
+placing "Named Block" in between the < >
+----

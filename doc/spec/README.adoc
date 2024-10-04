@@ -1,0 +1,11 @@
+= Specification
+
+This is the specification for writing literate code in AsciiDoc with `arachne`.
+
+== Basic Tangling
+
+.Here is an example of basic tangling functionality (link:spec1/spec1.adoc[]):
+[source, asciidoc]
+----
+include::spec1/README.adoc
+----
