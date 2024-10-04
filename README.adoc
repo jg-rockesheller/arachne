@@ -1,11 +1,11 @@
-= `Spider`
+= `Arachne`
 
-`Spider` is a tool for writing literate programs using https://asciidoc.org/[AsciiDoc] and https://asciidoctor.org/[Asciidoctor].
+`Arachne` is a tool for writing literate programs using https://asciidoc.org/[AsciiDoc] and https://asciidoctor.org/[Asciidoctor].
 
 .`Usage`:
 [source, txt]
 ----
-Usage: spider [OPTIONS]... [FILES / FILES:BLOCK]...
+Usage: arachne [OPTIONS]... [FILES / FILES:BLOCK]...
 A tool for writing literate programs using AsciiDoc.
 
 OPTIONS:
