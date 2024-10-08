@@ -1,0 +1,18 @@
+= Entry Point
+
+This document is the entry point for the documentation and source code of `arachne`.
+
+.`link:../arachne[]`:
+[arachne, ruby, shebang = "#!/usr/bin/env ruby", fencePrefix = "#"]
+----
+<<<get-adoc-blocks.adoc:Get AsciiDoc Blocks>>>
+
+<<<downtangle.adoc:Downtangle>>>
+
+<<<parse-cli-args.adoc:Parsing CLI Args>>>
+----
+
+.Links:
+* link:./parse-cli-args.adoc[Parsing CLI Arguments]
+* link:./downtangle.adoc[Downtangling]
+** link:./get-adoc-blocks.adoc[Getting AsciiDoc Blocks]

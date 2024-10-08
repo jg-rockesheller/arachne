@@ -1,0 +1,86 @@
+= Parsing CLI Arguments
+
+Arguments to `arachne` are specified in the link:../README.adoc[README].
+
+.`Parsing CLI Args`:
+[arachne, ruby]
+----
+command = "default"
+toTangle = []
+noConfirm = false
+onlyFiles = false
+
+for arg in ARGV.uniq()
+  if arg == "--" and not onlyFiles
+    onlyFiles = true
+  elsif arg.length > 2 and arg[0..1] == "--" and not onlyFiles
+    <<<Double Dash Flags>>>
+  elsif arg.length > 1 and arg[0] == "-" and not onlyFiles
+    <<<Single Dash Flags>>>
+  else
+    toTangle += [arg]
+  end
+end
+
+if command == "up"
+  puts "TODO"
+  # upTangle(toTangle)
+else
+  downTangle(toTangle)
+end
+----
+
+Pretty self-explanatory, these are the flags with two dashes (`--`).
+
+.`Double Dash Flags`:
+[arachne, ruby]
+----
+case arg
+when "--down"
+  if command == "up"
+    warn("arachne [ERROR]: flags --up and --down conflict")
+    exit 1
+  end
+  command = "down"
+when "--up"
+  if command == "down"
+    warn("arachne [ERROR]: flags --up and --down conflict")
+    exit 1
+  end
+  command = "up"
+when "--help"
+  puts("<<<../README.adoc:Usage>>>")
+  exit 0
+when "--no-confirm"
+  noConfirm = true
+end
+----
+
+Pretty self-explanatory, these are the flags with a single dash (`-`).
+These flags can be chained together in a single dash, for exmaple: `-uy`.
+
+.`Single Dash Flags`:
+[arachne, ruby]
+----
+for char in arg[1..].split("")
+  case char
+  when "d"
+    if command == "up"
+      warn "arachne [ERROR]: flags --up and --down conflict"
+      exit 1
+    end
+    command = "down"
+  when "u"
+    if command == "down"
+      warn "arachne [ERROR]: flags --up and --down conflict"
+      exit 1
+    end
+    command = "up"
+  when "h"
+    puts("<<<../README.adoc:Usage>>>")
+    exit 0
+  when "y"
+    noConfirm = true
+  end
+end
+----

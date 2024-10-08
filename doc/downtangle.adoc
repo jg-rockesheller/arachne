@@ -1,0 +1,12 @@
+= Downtangling
+
+This is for taking input from AsciiDoc documents and placing their code into source code files.
+
+.`Downtangle`:
+[arachne, ruby]
+----
+def downTangle(toTangle)
+  adocBlocks = getAdocBlocks(toTangle)
+  puts adocBlocks
+end
+----

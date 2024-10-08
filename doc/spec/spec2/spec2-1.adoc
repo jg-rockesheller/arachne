@@ -1,0 +1,10 @@
+= Spec Example 2.1
+
+.`example1.txt[]`:
+[arachne, txt]
+----
+this block will reference a block
+from another AsciiDoc document
+
+<<<spec2-2.adoc/Example Block>>>
+----

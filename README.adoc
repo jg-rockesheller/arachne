@@ -2,9 +2,8 @@
 
 `arachne` is a tool for writing literate programs using https://asciidoc.org/[AsciiDoc] and https://asciidoctor.org/[Asciidoctor].
 
-== `Usage`
-
-[source, txt]
+.`Usage`:
+[arachne, txt]
 ----
 Usage: arachne [OPTIONS]... [FILES / FILES:BLOCK]...
 A tool for writing literate programs using AsciiDoc.
@@ -22,7 +21,7 @@ OPTIONS:
     -y, --no-confirm                 automatically answers the default answer to prompts
 ----
 
-= Documentation Links
-
-* link:doc/spec/README.adoc[Specification]
+.Documentation links:
+* link:doc/spec/spec.adoc[Specification]
 * link:doc/project.adoc[Project Setup] (The LICENSE is here)
+* link:doc/README.adoc[Entry Point]

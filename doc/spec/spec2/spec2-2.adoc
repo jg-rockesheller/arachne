@@ -1,0 +1,11 @@
+= Spec Example 2.1
+
+.`Example Block`:
+[arachne, txt]
+----
+this is a block that
+
+will be referenced
+
+in another document
+----

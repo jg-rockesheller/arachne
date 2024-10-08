@@ -1,0 +1,61 @@
+= Specification
+
+This is the specification for writing literate code in AsciiDoc with `arachne`.
+
+== Basic Tangling
+
+.Here is an example of basic tangling functionality (link:spec1/spec1.adoc[]):
+[source, asciidoc]
+----
+include::spec1/spec1.adoc[]
+----
+
+After running `arachne spec1/spec1.adoc`, the result is:
+
+.link:spec1/example1.txt[]
+[source, txt]
+----
+include::spec1/example1.txt[]
+----
+
+.link:spec1/example2.txt[]
+[source, txt]
+----
+include::spec1/example2.txt[]
+----
+
+== Tangling From Another File
+
+<!-- TODO: tangling from files online -->
+
+Use `<<<Relative File Path:Block Name>>>` to reference a block from another AsciiDoc document.
+
+.link:spec2/spec2-1.adoc[]
+[source, asciidoc]
+----
+include::spec2/spec2-1.adoc[]
+----
+
+.link:spec2/spec2-2.adoc[]
+[source, asciidoc]
+----
+include::spec2/spec2-2.adoc[]
+----
+
+After running `arachne spec2/spec2-1.adoc`, the result is:
+
+.link:spec2/example1.txt[]
+[source, txt]
+----
+include::spec2/example1.txt[]
+----
+
+== Fence Comments
+
+When creating a
+
+.link:spec3/spec3.adoc[]
+[source, asciidoc]
+----
+include::spec3/spec3.adoc[]
+----

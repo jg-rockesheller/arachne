@@ -1,0 +1,63 @@
+= Getting AsciiDoc Blocks
+
+.`Get AsciiDoc Blocks`:
+[arachne, ruby]
+----
+def getAdocBlocks(toTangle)
+  adocBlocks = []
+
+  for arg in toTangle
+    <<<Preblock Checks>>>
+
+    # TODO - <<<Extract Blocks>>>
+
+    <<<Postblock Checks>>>
+  end
+
+  return adocBlocks
+end
+----
+
+== Checks
+
+These are mostly checks to see if the inputs to the program are valid.
+
+.For downtangling, these valid input formats are:
+* `<AsciiDoc File Path>`
+* `<AsciiDoc File Path>:<Arache Block Name>`
+
+Pretty self-explanatory, these checks will be run before the blocks in a document are found.
+
+.`Preblock Checks`:
+[arachne, ruby]
+----
+if File.file?(arg)
+  toTangle += [arg]
+  next
+end
+
+filePath = arg
+if not filePath.include?(":")
+  warn("arachne [WARNING]: could not find file \"" + arg + "\"")
+  next
+else
+  filePath = arg[/^.+(?=:)/]
+end
+
+if not File.file?(filePath)
+  warn("arachne [WARNING]: could not find file \"" + filePath + "\" in argument \"" + arg + "\"")
+  next
+end
+----
+
+Also self-explanatory, these checks will be run after all the blocks in a document are found.
+
+.`Postblock Checks`:
+[arachne, ruby]
+----
+inpBlock = arg[/(?<=:).+$/]
+puts inpBlock
+
+# TODO - check if block is found in file
+----
+

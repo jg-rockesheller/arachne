@@ -1,7 +1,7 @@
-= Spec Example 1
+= Spec Example 3
 
 .`link:example1.txt[]`:
-[arachne, txt]
+[arachne, txt, prefix = "/*", suffix = "*/"]
 ----
 this is a block that will
 be tangled to example1.txt
@@ -21,7 +21,7 @@ prefix: <<<Named Block>>> :suffix
 ----
 
 .`Named Block`:
-[arachne, txt]
+[arachne, txt, prefix = "//"]
 ----
 this block is named "Named Block"
 
